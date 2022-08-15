@@ -44,10 +44,6 @@ const errorHandler = (err, _req, res, _next) => {
     case PrismaClientKnownRequestError:
       switch (err.code) {
         case 'P2025':
-          error.error = err.meta.cause;
-          error.errorCode = 404;
-          break;
-
         case 'P2026':
           error.error = err.meta.cause;
           error.errorCode = 404;

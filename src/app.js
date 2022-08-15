@@ -1,10 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
-import errorHandler from './middlewares/errorHandler';
+import errorHandler, { NotFoundError } from './middlewares/errorHandler';
 import validateRequest from './middlewares/validation';
 import 'dotenv/config';
-import { NotFoundError } from './middlewares/errorHandler';
 import formatData from './middlewares/formatData';
 
 import v1Router from './api/v1/routes';
